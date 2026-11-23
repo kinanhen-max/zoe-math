@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="he" dir="rtl" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#17324d" />
+    <meta name="google" content="notranslate" />
+    <meta name="description" content="הר השלג: חיסור עם פריטה לזואי. בלוקי קרח, פינגווין, ומסלול קצר." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="הר השלג" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="icon" href="/zoe-math/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/zoe-math/icons/icon-192.png" />
+    <title>הר השלג</title>
+    <script>
+      (function () {
+        var key = "zoe-sw-bust-tasks-5"
+        if (!("serviceWorker" in navigator) || localStorage.getItem(key)) return
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          if (!regs.length) {
+            localStorage.setItem(key, "1")
+            return
+          }
+          return Promise.all(regs.map(function (reg) { return reg.unregister() })).then(function () {
+            if (!("caches" in window)) return
+            return caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (name) { return caches.delete(name) }))
+            })
+          }).then(function () {
+            localStorage.setItem(key, "1")
+            location.reload()
+          })
+        })
+      })()
+    </script>
+    <script type="module" crossorigin src="/zoe-math/assets/index-Iugi-zJu.js"></script>
+    <link rel="stylesheet" crossorigin href="/zoe-math/assets/index-B3wzC-m6.css">
+  <link rel="manifest" href="/zoe-math/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
